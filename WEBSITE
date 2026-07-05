@@ -1,0 +1,439 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>S.Sarang | AI &amp; Data Science Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Geist:wght@500&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#444173",
+                    "surface-container-high": "#222a3d",
+                    "surface-container-lowest": "#060e20",
+                    "on-tertiary-fixed-variant": "#85145a",
+                    "surface-container": "#171f33",
+                    "surface": "#0b1326",
+                    "on-error": "#690005",
+                    "secondary-container": "#444173",
+                    "on-secondary": "#2d2a5b",
+                    "primary-fixed": "#f0dbff",
+                    "outline": "#988d9f",
+                    "on-tertiary-fixed": "#3d0026",
+                    "tertiary-fixed": "#ffd8e7",
+                    "on-surface": "#dae2fd",
+                    "surface-variant": "#2d3449",
+                    "on-surface-variant": "#cfc2d6",
+                    "on-primary-fixed-variant": "#6900b3",
+                    "inverse-on-surface": "#283044",
+                    "on-tertiary-container": "#560038",
+                    "tertiary-container": "#e364a7",
+                    "inverse-surface": "#dae2fd",
+                    "surface-bright": "#31394d",
+                    "surface-tint": "#ddb7ff",
+                    "secondary-fixed-dim": "#c4c1fb",
+                    "surface-dim": "#0b1326",
+                    "on-secondary-fixed": "#181445",
+                    "surface-container-low": "#131b2e",
+                    "outline-variant": "#4d4354",
+                    "primary-container": "#b76dff",
+                    "primary": "#ddb7ff",
+                    "tertiary": "#ffafd3",
+                    "on-secondary-container": "#b3afe9",
+                    "error-container": "#93000a",
+                    "on-primary": "#490080",
+                    "on-background": "#dae2fd",
+                    "on-primary-fixed": "#2c0051",
+                    "error": "#ffb4ab",
+                    "background": "#0b1326",
+                    "surface-container-highest": "#2d3449",
+                    "secondary": "#c4c1fb",
+                    "on-tertiary": "#620040",
+                    "secondary-fixed": "#e3dfff",
+                    "tertiary-fixed-dim": "#ffafd3",
+                    "inverse-primary": "#842bd2",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-container": "#400071",
+                    "primary-fixed-dim": "#ddb7ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "lg": "40px",
+                    "base": "4px",
+                    "xs": "8px",
+                    "xl": "64px",
+                    "md": "24px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "sm": "16px",
+                    "section-gap": "120px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "label-sm": ["Geist"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(11, 19, 38, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(152, 141, 159, 0.2);
+        }
+        .tech-pattern {
+            background-image: radial-gradient(#2d3449 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .cert-image-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            background: #171f33;
+        }
+        .cert-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Entrance Animations */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal-element.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            /* Ambient Motion */
+            @keyframes float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-15px); }
+            }
+            .floating-image {
+                animation: float 6s ease-in-out infinite;
+            }
+
+            @keyframes pulse-accent {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0.7; text-shadow: 0 0 10px rgba(221, 183, 255, 0.4); }
+            }
+            .pulse-text {
+                animation: pulse-accent 4s ease-in-out infinite;
+            }
+
+            @keyframes shimmer {
+                0% { background-position: -200% center; }
+                100% { background-position: 200% center; }
+            }
+            .shimmer-button {
+                background-size: 200% auto;
+                background-image: linear-gradient(90deg, #b76dff 0%, #ddb7ff 50%, #b76dff 100%);
+                transition: transform 0.3s ease;
+            }
+            .shimmer-button:hover {
+                animation: shimmer 2s linear infinite;
+                transform: translateY(-2px);
+            }
+        }
+
+        /* Nav Link Underline */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ddb7ff;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Cert Card Interactions */
+        .cert-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .cert-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(183, 109, 255, 0.2);
+            background: rgba(23, 31, 51, 0.8);
+        }
+        .cert-card:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Cursor Glow Effect */
+        .cursor-glow {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(183, 109, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        @media (min-width: 1024px) {
+            .cursor-glow { display: block; }
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface overflow-x-hidden">
+<div class="cursor-glow" id="cursor-glow" style="left: 1112px; top: 3803px;"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-primary tracking-tight transition-transform hover:scale-105" href="#">S.Sarang</a>
+<div class="hidden md:flex gap-stack-lg items-center">
+<a class="nav-link text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#about">About</a>
+<a class="nav-link text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#certifications">Certifications</a>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-body-md rounded-lg scale-95 active:opacity-80 transition-all hover:shadow-[0_0_15px_rgba(183,109,255,0.4)]">Connect</button>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[1024px] flex items-center pt-16 overflow-hidden tech-pattern">
+<div class="relative z-10 px-gutter max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+<div class="space-y-stack-md">
+<h1 class="reveal-element font-display-lg text-display-lg-mobile md:text-display-lg leading-tight text-on-surface visible">
+                        Soleha Sayed <span class="text-primary pulse-text inline-block">Sarang</span>
+</h1>
+<p class="reveal-element font-body-lg text-body-lg text-on-surface-variant max-w-lg visible" style="transition-delay: 0.2s;">
+                        AI &amp; Data Science Student dedicated to building intelligent solutions and uncovering insights through data-driven precision.
+                    </p>
+<div class="reveal-element flex gap-stack-md pt-stack-md visible" style="transition-delay: 0.4s;">
+<a class="shimmer-button bg-primary-container text-on-primary-container px-8 py-4 font-body-md rounded-xl flex items-center gap-2 shadow-lg shadow-primary-container/20" href="#certifications">
+                            View My Work
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="border border-outline-variant text-on-surface px-8 py-4 font-body-md rounded-xl hover:bg-surface-variant/20 transition-all duration-300" href="#about">
+                            My Journey
+                        </a>
+</div>
+</div>
+<div class="hidden md:block">
+<div class="relative aspect-square max-w-md mx-auto floating-image">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="glass-card w-full h-full rounded-full flex items-center justify-center p-gutter relative overflow-hidden transition-all duration-1000 shadow-2xl">
+<img alt="Soleha Sayed Sarang" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBESUpvNaTlu7PdAqTXfE9w_eB-JgKtYuBZNuMms8cWsr9ZL62vkRi_txGilFTGAjFh1wTlaahaYzjmM_bgwStQU7Q43EgYVFJhOqTkeRWhQ60y6YNTB-PlDxYA57d6gcuNT0OdvHdzmVwuQn0V459vxbsdTHvLioHYZEqgflxdyWxJwlRD8iSQLf_F_1qtwnf9vJozIrV6hzX3Jr_j3cVaMYgfpsauoxw4X1NaLX-0tvvprozXHzGCj5WYXS4d6-KsaC62PMC-ttTL">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="py-section-gap px-gutter max-w-container-max mx-auto" id="about">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg">
+<div class="md:col-span-4">
+<h2 class="reveal-element font-display-lg text-headline-md md:text-display-lg-mobile text-on-surface sticky top-24 visible">
+                        About <span class="text-primary">Me</span>
+</h2>
+</div>
+<div class="md:col-span-8">
+<div class="reveal-element glass-card p-stack-lg rounded-xl space-y-stack-md transition-all duration-700 visible" style="transition-delay: 0.1s;">
+<p class="font-body-lg text-body-lg leading-relaxed text-on-surface-variant">
+                            Hi, I'm Soleha Sarang, a AI &amp; Data Science student with a passion for artificial intelligence, machine learning, and data-driven problem solving. I enjoy exploring new technologies, building practical projects, and continuously expanding my skills.
+                        </p>
+<p class="font-body-lg text-body-lg leading-relaxed text-on-surface-variant">
+                            Through this website, I share my journey, projects, achievements, and experiences as I work toward becoming a skilled data professional. Welcome to my portfolio!
+                        </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-stack-md pt-stack-md">
+<div class="p-stack-sm bg-surface-dim rounded-lg border border-outline-variant/30 text-center transition-transform hover:-translate-y-1 duration-300">
+<div class="text-primary font-headline-md text-headline-md">Python</div>
+<div class="font-label-sm text-label-sm">Primary Lang</div>
+</div>
+<div class="p-stack-sm bg-surface-dim rounded-lg border border-outline-variant/30 text-center transition-transform hover:-translate-y-1 duration-300" style="transition-delay: 0.05s;">
+<div class="text-primary font-headline-md text-headline-md">HTML</div>
+</div>
+<div class="p-stack-sm bg-surface-dim rounded-lg border border-outline-variant/30 text-center transition-transform hover:-translate-y-1 duration-300" style="transition-delay: 0.1s;">
+<div class="text-primary font-headline-md text-headline-md">SQL</div>
+</div>
+<div class="p-stack-sm bg-surface-dim rounded-lg border border-outline-variant/30 text-center transition-transform hover:-translate-y-1 duration-300" style="transition-delay: 0.15s;">
+<div class="text-primary font-headline-md text-headline-md">C</div>
+<div class="font-label-sm text-label-sm">Statistics</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications Section -->
+<section class="py-section-gap px-gutter max-w-container-max mx-auto" id="certifications">
+<h2 class="reveal-element font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-stack-lg text-center visible">Certifications &amp; <span class="text-primary">Achievements</span></h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-stack-md">
+<!-- Staggered Cert Cards -->
+<div class="reveal-element p-stack-md glass-card rounded-xl text-center flex flex-col items-center cert-card visible" style="transition-delay: 0.0s;">
+<div class="cert-image-container border border-outline-variant/30">
+<img alt="The Joy of Computing using Python Certificate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALrxjAzFbPELGBbEOOHCgxBDMUgzkY_IzdSmj8NwJ1ywn9JJktc9J6p6df_km26T1ybNEHPUa_cNDa0RTFfPqAmgwd_Z_--GjiiIsJ0FRa5mN7L5PFpJ04Bz3uLzFNOYOCkaiEsGHdNxp77TTuA236R3HGX5ZX_ISvo55Bo3qMQ3lJQDqxP3Vl94Z0kgJYPGqMp-7XGPcgJRrs5ucyWj_ef05EPLg4poALPICpM3IbDbsFSSEt6hqGi-XROEnovA6g0qY6kpzs_4wL" class="">
+</div>
+<h4 class="font-body-md font-bold text-on-surface mb-1">The Joy of Computing using Python</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-3">NPTEL</p>
+<a class="text-primary font-label-sm text-label-sm border border-primary/30 px-3 py-1 rounded-full hover:bg-primary/10 transition-colors" href="#">Verify Link</a>
+</div>
+<div class="reveal-element p-stack-md glass-card rounded-xl text-center flex flex-col items-center cert-card visible" style="transition-delay: 0.1s;">
+<div class="cert-image-container border border-outline-variant/30">
+<img alt="AI Tools Workshop Certificate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCceLX36_aEgkU1BIohgz_eYv-HCOl-kJelPP69KKidnoxWC50f4mmdY6lpDKXRCJ848CDH2M0S-3xZ1WbL3Yb4iTNouBeVNYae5-5UgyY8adBMjyIxaUYnI7JOg4M5man_XztB-rBC4oq6YWkdBX88eP9dBwGX7_qQgdTFt2A5Ch4BGcYklvbkmqpmbqMlRnP5lt0XOpMNOOlviQwqa11sHp1UtmTdvxZNg7TF1xFgTogDIxy23i5bb3_Xwvd76wmKuAMnqX0SnGm-" class="">
+</div>
+<h4 class="font-body-md font-bold text-on-surface mb-1">AI Tools Workshop</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-3">be10X</p>
+<a class="text-primary font-label-sm text-label-sm border border-primary/30 px-3 py-1 rounded-full hover:bg-primary/10 transition-colors" href="#">Verify Link</a>
+</div>
+<div class="reveal-element p-stack-md glass-card rounded-xl text-center flex flex-col items-center cert-card visible" style="transition-delay: 0.2s;">
+<div class="cert-image-container border border-outline-variant/30">
+<img alt="Oracle AI Vector Search Certified Professional Certificate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfS0J4V5N8tBQVlLm7K_pr-vJ8wCGaBa5a4uSwnSQf1Ar3pRJRcuY4KdCxhej9rjneErOiNJ3p0L1BjjAnjxiQDXjUzWi80xysVpNBq8_PUHs0Q6mCTkBecMQxNS3Yks37aBUl_3HNtEeOke4nAAsapJ6U8bO0iS7mH-ZZ-Stc5tzPSml4YUYWi0rJTgxyqclPT7fMTc_xCSbifPtB2VGbeYtFATD3q5ipX8JsKmbMoSt8bxZ9cKUSdWmjkjqevBsTeWE9dG3qYRnu" class="">
+</div>
+<h4 class="font-body-md font-bold text-on-surface mb-1">Oracle AI Vector Search Certified Professional</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-3">Oracle University</p>
+<a class="text-primary font-label-sm text-label-sm border border-primary/30 px-3 py-1 rounded-full hover:bg-primary/10 transition-colors" href="#">Verify Link</a>
+</div>
+<div class="reveal-element p-stack-md glass-card rounded-xl text-center flex flex-col items-center cert-card visible" style="transition-delay: 0.3s;">
+<div class="cert-image-container border border-outline-variant/30">
+<img alt="OCI 2025 Certified Generative AI Professional Certificate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3wPp4GoEsCDzPg827-q3bL2wu4jkmZ3dr6PbS3zsGFM7Z_j59JvJ4TxRJ0El6-zYqSlGyTFrRmjJdJAAI3Af9fGnKSXTFt91ntGFjUkrDh7LPJzGDItVt5lzO7aSTOb5VEmxawlDemzJThp0FRZUcItDouzzEZcI4zSmQzykgn1QHwCwdaOfj8IijVbMEr6ESYg44M0p37nmDs6gJQd9BdHArcdA14LKjSxDRJpAl3TZoFTbOIZeeNLvSUlBkoKmhD_8ylPRpr6t6" class="">
+</div>
+<h4 class="font-body-md font-bold text-on-surface mb-1">OCI 2025 Certified Generative AI Professional</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-3">Oracle University</p>
+<a class="text-primary font-label-sm text-label-sm border border-primary/30 px-3 py-1 rounded-full hover:bg-primary/10 transition-colors" href="#">Verify Link</a>
+</div>
+<div class="reveal-element p-stack-md glass-card rounded-xl text-center flex flex-col items-center cert-card visible" style="transition-delay: 0.4s;">
+<div class="cert-image-container border border-outline-variant/30">
+<img alt="OCI 2025 Certified AI Foundations Associate Certificate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfArWEO4-ExHs7ScSmsQlp_HJoBPBIEftQsKCy5vUE26Rsxw0KMQV3atOepfopc_18zImat8j_qp1frlvUx76UX8BV0uXyx2IiWauPHCrSG3j3STJdMLda7q0z3-ZUbhIPDGh1gXLG2YfEt1ac_UCqnnVPf1BHLb0ZrHvOlgekv8X3YGxRRzw0FQEoGTL-flpS9qOFq4ifA01bjdGQoCN8GqVrhuSkcwsbkpQkPsBb9Z4eZl9hDQjD49nvTOQqGriqney0ktP_20eI" class="">
+</div>
+<h4 class="font-body-md font-bold text-on-surface mb-1">OCI 2025 Certified AI Foundations Associate</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-3">Oracle University</p>
+<a class="text-primary font-label-sm text-label-sm border border-primary/30 px-3 py-1 rounded-full hover:bg-primary/10 transition-colors" href="#">Verify Link</a>
+</div>
+<div class="reveal-element p-stack-md glass-card rounded-xl text-center flex flex-col items-center cert-card visible" style="transition-delay: 0.5s;">
+<div class="cert-image-container border border-outline-variant/30">
+<img alt="Oracle Data Platform 2025 Certified Foundations Associate Certificate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3trBzll3PZ4xB5b_UIbcbHSIXrNkpwqYm2d8mkZxSwaP7e_rM0qJIdVmzHbXiU2MM1o7rxy6GeWjmUTt4lG5E3ZdAarsj8eUCzzXqKTZxtKmseNM2M60cjBy6bbyClZIISG6_3V6PJpcX9PXYAhpWiaUQM-tjS6tOyUGaRUDWC48wnSa7P6OOewTdnecXphFVjIlo_Wr79QgRhXfBHI9GpcVBanFI0lFOWPy_Ba-wkjMXtxKDoHzpKgR8fuqzn9vaIweNKz8n4iaq" class="">
+</div>
+<h4 class="font-body-md font-bold text-on-surface mb-1">Oracle Data Platform 2025 Certified Foundations Associate</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-3">Oracle University</p>
+<a class="text-primary font-label-sm text-label-sm border border-primary/30 px-3 py-1 rounded-full hover:bg-primary/10 transition-colors" href="#">Verify Link</a>
+</div>
+<div class="reveal-element p-stack-md glass-card rounded-xl text-center flex flex-col items-center cert-card visible" style="transition-delay: 0.6s;">
+<div class="cert-image-container border border-outline-variant/30">
+<img alt="Oracle Cloud Infrastructure 2025 Certified Foundations Associate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwNEaieCk5z1wda1gvkJOz2SCKqP4LxN3oZJIATWIUa74i1OJSKz0KeejsDO9FT39XmbG_3J1BuMzKCIAx8HxeutAjyUU47Lu5tsVredm6ZbF6ZrCJjfgbFtMO40Xbvz3CjMhv4E09syVTC7EVhVGKzVooQYoGVLakhCZo91Q4yATf2Wo15uWXdsP40htYgNWbZKs348E1Sy7ZPHFpMN7xboumn1fo-Vcd5jM5FdoP-4Ul4LWqy9eCAMdjISJAlFDNAt-QWTmhWVFs" class="">
+</div>
+<h4 class="font-body-md font-bold text-on-surface mb-1">OCI 2025 Certified Foundations Associate</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-3">Oracle University</p>
+<a class="text-primary font-label-sm text-label-sm border border-primary/30 px-3 py-1 rounded-full hover:bg-primary/10 transition-colors" href="#">Verify Link</a>
+</div>
+</div>
+<div class="reveal-element flex justify-center mt-stack-lg visible" style="transition-delay: 0.7s;">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 font-body-md font-bold rounded-xl hover:scale-105 transition-transform flex items-center gap-2 shadow-lg shadow-primary-container/20 group" href="https://drive.google.com/drive/folders/1GZZ0WUwB1bB2EXkdoPecai8DtpXsJLg8?usp=drive_link" target="_blank">
+                    View My Full Certificates
+                    <span class="material-symbols-outlined transition-transform group-hover:rotate-12">open_in_new</span>
+</a>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap px-gutter text-center bg-gradient-to-b from-surface to-surface-container-low">
+<div class="max-w-3xl mx-auto space-y-stack-md">
+<h2 class="reveal-element font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface visible">Ready to start a <span class="text-primary pulse-text inline-block">data-driven</span> conversation?</h2>
+<p class="reveal-element font-body-lg text-body-lg text-on-surface-variant visible" style="transition-delay: 0.1s;">I'm always looking for interesting projects to collaborate on. Feel free to reach out via LinkedIn or email.</p>
+<div class="reveal-element flex justify-center gap-stack-md pt-stack-md visible" style="transition-delay: 0.2s;">
+<button class="shimmer-button bg-primary-container text-on-primary-container px-10 py-4 font-body-md font-bold rounded-xl shadow-xl shadow-primary-container/20">Get In Touch</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/20">
+
+</footer>
+<script>
+        // Cursor Glow Follow
+        const glow = document.getElementById('cursor-glow');
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 64,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-element').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+
+</body></html>
